@@ -1,4 +1,3 @@
-// loading on firefox // check loading in general
 var status = 0;
 $bottom = 100;
 $position = 0;
