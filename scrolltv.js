@@ -27,6 +27,7 @@ function start() {
                 scrollTV();
             }, 1000);        
         }
+        var $ = jQuery.noConflict();
         $('#title-scroll').remove();
         if (!($.browser.mozilla)) {
             $('<div id="loading-scroll" class="text-small-scroll" >Loading</div>').appendTo('#blackscreen');
