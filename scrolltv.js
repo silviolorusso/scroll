@@ -34,9 +34,11 @@ function start() {
              jQuery('<div id="loading-scroll" class="text-small-scroll" ><img src="http://www.silviolorusso.com/scrolltv/loading.png" /></div>').appendTo('#blackscreen');
         }
         if (!(jQuery.browser.mozilla)) {  
-        	try {
+	    	try {
 	        	 jQuery(document).fullScreen(true); 
-	        }
+	        } catch(err) {
+			  console.log('no fullscreen');
+		}
          };
          jQuery('#soundtrack')[0].addEventListener('oncanplay', start2(), false); 
     } else {
