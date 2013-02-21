@@ -44,6 +44,7 @@ function start() {
     }
 }
 function main() {
+    var $ = jQuery.noConflict();
     if (!$('#style-scroll').length) {
         $('<script src="https://raw.github.com/silviolorusso/scroll/master/jquery.fullscreen-min.js"> </script>').appendTo('head');
         style = "<style id=\"style-scroll\"> @font-face { font-family: 'AmericanPurpose'; src: url('http://www.silviolorusso.com/scrolltv/font/american_purpose_casual_02-webfont.eot'); src: url('http://www.silviolorusso.com/scrolltv/font/american_purpose_casual_02-webfont.eot?#iefix') format('embedded-opentype'), url('http://www.silviolorusso.com/scrolltv/font/american_purpose_casual_02-webfont.woff') format('woff'), url('http://www.silviolorusso.com/scrolltv/font/american_purpose_casual_02-webfont.ttf') format('truetype'), url('http://www.silviolorusso.com/scrolltv/font/american_purpose_casual_02-webfont.svg#AmericanPurposeCasual02Rg') format('svg'); font-weight: normal; font-style: normal; } body { overflow:hidden !important; } div#transpscreen, div#blackscreen  { position:fixed; top: 0; bottom:0; left:0; right:0; z-index:9999;} div#blackscreen {background-color: black; z-index:9990} div#title-scroll, div#loading-scroll { width:100%; text-align:center; margin-top:200px; color: white; } div#loading-scroll { margin-top: 300px; } .title-scroll { font-family: 'AmericanPurpose'; font-size: 80px; line-height:50px; color: white; font-weight: bold; text-decoration: none; } .text-small-scroll { font-family: 'AmericanPurpose'; font-weight:normal; font-size: 19px; line-height: 20px; margin-top:10px; }</style>";
