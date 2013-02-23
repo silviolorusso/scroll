@@ -28,11 +28,7 @@ function start() {
             }, 1000);        
         }
          jQuery('#title-scroll').remove();
-        if (!(jQuery.browser.mozilla)) {
-             jQuery('<div id="loading-scroll" class="text-small-scroll" >Loading</div>').appendTo('#blackscreen');
-        } else {
-             jQuery('<div id="loading-scroll" class="text-small-scroll" ><img src="http://www.silviolorusso.com/scrolltv/loading.png" /></div>').appendTo('#blackscreen');
-        }
+                 jQuery('<div id="loading-scroll" class="text-small-scroll" ><img src="http://www.silviolorusso.com/scrolltv/loading.png" /></div>').appendTo('#blackscreen');
     	try {
         	 jQuery(document).fullScreen(true); 
         } catch(err) {
