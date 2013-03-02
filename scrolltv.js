@@ -1,19 +1,16 @@
 var status = 0;
 $bottom = 100;
-$position = 0;
 function scrollTV() {
-    if ( ( jQuery(document).scrollTop() +  jQuery(window).height() - 500 ) >= $position ) {
-        $position = $position + 50;
-         jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
-    	   $bottom = $bottom + 100;
-    	   scrollTV();
+    if ( ( jQuery(document).scrollTop() + jQuery(window).height() ) <= ( jQuery(document).height() - 20 )  ) {
+        $bottom = $bottom + 100;
+        jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
+        	scrollTV();
         });
     } else {
-         jQuery('html, body').stop(true);
-         jQuery('#style-scroll, #soundtrack, #atransp').remove();
-         jQuery(document).fullScreen(false);
-         jQuery('#soundtrack')[0].pause();
-        status = 0;
+    	$bottom = 100;
+    	jQuery('html, body').stop(true);
+	    jQuery('html, body').animate({scrollTop:1}, 0);
+	    scrollTV();
     }
 };
 function start() {
