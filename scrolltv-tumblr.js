@@ -2,12 +2,13 @@ var status = 0;
 $bottom = 100;
 $position = 0;
 function scrollTV() {
-    if ( jQuery(document).scrollTop() <= ( jQuery(window).height() - 500 ) ) {
+    if ( jQuery(document).scrollTop() <= jQuery(window).height()  ) {
         $position = $position + 50;
         $bottom = $bottom + 100;
          jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
     	   scrollTV();
         });
+        console.log("continue");
         console.log($bottom);
         console.log("scrollpos: " + jQuery(document).scrollTop());
         console.log("winheight: " + jQuery(window).height());
