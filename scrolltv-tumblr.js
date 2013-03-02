@@ -11,7 +11,7 @@ function scrollTV() {
         console.log("continue");
         console.log($bottom);
         console.log("scrollpos: " + jQuery(document).scrollTop());
-        console.log("winheight: " + jQuery(window).height());
+        console.log("winheight: " + jQuery(document).height());
     } else {
     	$bottom = 100;
     	$position = 0;
@@ -19,7 +19,7 @@ function scrollTV() {
 	    jQuery('html, body').animate({scrollTop:1}, 0);
 	    scrollTV();
 	    console.log("scrollpos: " + jQuery(document).scrollTop());
-        console.log("winheight: " + jQuery(window).height());
+        console.log("winheight: " + jQuery(document).height());
     }
 };
 function start() {
