@@ -9,11 +9,7 @@ function scrollTV() {
     	   scrollTV();
         });
     } else {
-         jQuery('html, body').stop(true);
-         jQuery('#style-scroll, #soundtrack, #atransp').remove();
-         jQuery(document).fullScreen(false);
-         jQuery('#soundtrack')[0].pause();
-        status = 0;
+	    window.scrollTo(0, 0);
     }
 };
 function start() {
