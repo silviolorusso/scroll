@@ -9,6 +9,7 @@ function scrollTV() {
     	   scrollTV();
         });
     } else {
+    	$bottom = 100;
 	    window.scrollTo(0, 0);
     }
 };
