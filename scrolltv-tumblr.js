@@ -2,7 +2,7 @@ var status = 0;
 $bottom = 100;
 $position = 0;
 function scrollTV() {
-    if ( jQuery(document).scrollTop() <= ( jQuery(document).height() + 500 )  ) {
+    if ( ( jQuery(document).scrollTop() + jQuery(windows).height() ) <= ( jQuery(document).height() )  ) {
         $position = $position + 50;
         $bottom = $bottom + 100;
          jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
@@ -10,16 +10,16 @@ function scrollTV() {
         });
         console.log("continue");
         console.log($bottom);
-        console.log("scrollpos: " + jQuery(document).scrollTop());
-        console.log("winheight: " + jQuery(document).height());
+        console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() );
+        console.log("docheight: " + jQuery(document).height());
     } else {
     	$bottom = 100;
     	$position = 0;
     	jQuery('html, body').stop(true);
 	    jQuery('html, body').animate({scrollTop:1}, 0);
 	    scrollTV();
-	    console.log("scrollpos: " + jQuery(document).scrollTop());
-        console.log("winheight: " + jQuery(document).height());
+	    console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() );
+        console.log("docheight: " + jQuery(document).height());
     }
 };
 function start() {
