@@ -2,20 +2,23 @@ var status = 0;
 $bottom = 100;
 $position = 0;
 function scrollTV() {
-    if ( ( jQuery(document).scrollTop() +  jQuery(window).height() - 500 ) >= $position ) {
+    if ( jQuery(document).scrollTop() <= ( jQuery(window).height() - 500 ) ) {
         $position = $position + 50;
         $bottom = $bottom + 100;
          jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
     	   scrollTV();
         });
         console.log($bottom);
+        console.log("scrollpos: " + jQuery(document).scrollTop());
+        console.log("winheight: " + jQuery(window).height());
     } else {
     	$bottom = 100;
     	$position = 0;
     	jQuery('html, body').stop(true);
 	    jQuery('html, body').animate({scrollTop:1}, 0);
 	    scrollTV();
-	    console.log($bottom);
+	    console.log("scrollpos: " + jQuery(document).scrollTop());
+        console.log("winheight: " + jQuery(window).height());
     }
 };
 function start() {
