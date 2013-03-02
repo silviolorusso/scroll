@@ -11,6 +11,7 @@ function scrollTV() {
         console.log($bottom);
     } else {
     	$bottom = 100;
+    	$position = 0;
 	    window.scrollTo(0, 0);
 	    console.log($bottom);
     }
