@@ -13,6 +13,7 @@ function scrollTV() {
     	$bottom = 100;
     	$position = 0;
 	    window.scrollTo(0, 0);
+	    scrollTV();
 	    console.log($bottom);
     }
 };
