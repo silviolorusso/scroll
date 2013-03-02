@@ -2,7 +2,7 @@ var status = 0;
 $bottom = 100;
 $position = 0;
 function scrollTV() {
-    if ( jQuery(document).scrollTop() <= ( jQuery(window).height() + 100 )  ) {
+    if ( jQuery(document).scrollTop() <= ( jQuery(window).height() + 300 )  ) {
         $position = $position + 50;
         $bottom = $bottom + 100;
          jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
