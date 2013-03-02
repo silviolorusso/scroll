@@ -10,7 +10,7 @@ function scrollTV() {
         });
         console.log("continue");
         console.log($bottom);
-        console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() );
+        console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() ) );
         console.log("docheight: " + jQuery(document).height());
     } else {
     	$bottom = 100;
@@ -18,7 +18,7 @@ function scrollTV() {
     	jQuery('html, body').stop(true);
 	    jQuery('html, body').animate({scrollTop:1}, 0);
 	    scrollTV();
-	    console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() );
+	    console.log("scrollpos: " + ( jQuery(document).scrollTop() + jQuery(windows).height() ) );
         console.log("docheight: " + jQuery(document).height());
     }
 };
