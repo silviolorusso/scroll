@@ -2,8 +2,8 @@ var status = 0;
 $bottom = 100;
 function scrollTV() {
     if ( ( jQuery(document).scrollTop() + jQuery(window).height() ) <= ( jQuery(document).height() - 20 )  ) {
-        $bottom = $bottom + 100;
-        jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
+        jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() {
+        	$bottom = $bottom + 100; 
         	scrollTV();
         });
     } else {
@@ -30,7 +30,7 @@ function start() {
         	 jQuery(document).fullScreen(true); 
         } catch(err) {
 		  console.log('no fullscreen');
-	}
+		}
          jQuery('#soundtrack')[0].addEventListener('oncanplay', start2(), false); 
     } else {
         status = 0;
