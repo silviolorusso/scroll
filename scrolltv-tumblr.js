@@ -4,8 +4,8 @@ $position = 0;
 function scrollTV() {
     if ( ( jQuery(document).scrollTop() +  jQuery(window).height() - 500 ) >= $position ) {
         $position = $position + 50;
+        $bottom = $bottom + 100;
          jQuery('html, body').animate({scrollTop:$bottom}, 2500, 'linear', function() { 
-         $bottom = $bottom + 100;
     	   scrollTV();
         });
         console.log($bottom);
@@ -13,9 +13,9 @@ function scrollTV() {
     	$bottom = 100;
     	$position = 0;
     	jQuery('html, body').stop(true);
-	jQuery('html, body').animate({scrollTop:1}, 0);
-	scrollTV();
-	console.log($bottom);
+	    jQuery('html, body').animate({scrollTop:1}, 0);
+	    scrollTV();
+	    console.log($bottom);
     }
 };
 function start() {
