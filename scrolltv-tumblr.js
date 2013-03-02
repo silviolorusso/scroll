@@ -8,9 +8,11 @@ function scrollTV() {
          $bottom = $bottom + 100;
     	   scrollTV();
         });
+        console.log($bottom);
     } else {
     	$bottom = 100;
 	    window.scrollTo(0, 0);
+	    console.log($bottom);
     }
 };
 function start() {
