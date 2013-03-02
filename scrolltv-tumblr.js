@@ -12,7 +12,7 @@ function scrollTV() {
     } else {
     	$bottom = 100;
     	$position = 0;
-	    jQuery('html, body').scrollTo(0, 0);
+	    jQuery('html, body').animate({scrollTop:1}, 0);
 	    scrollTV();
 	    console.log($bottom);
     }
